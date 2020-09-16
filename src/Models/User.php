@@ -5,7 +5,7 @@ namespace Sebastienheyd\Boilerplate\Models;
 // phpcs:disable Generic.Files.LineLength
 
 use Carbon\Carbon;
-use Gravatar;
+use Thomaswelton\LaravelGravatar\Facades\Gravatar;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;

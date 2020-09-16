@@ -4,31 +4,6 @@ namespace Sebastienheyd\Boilerplate\Tests;
 
 class MigrationTest extends TestCase
 {
-    /**
-     * Define environment setup.
-     *
-     * @param \Illuminate\Foundation\Application $app
-     *
-     * @return void
-     */
-    protected function getEnvironmentSetUp($app)
-    {
-        // Setup default database to use sqlite :memory:
-        $app['config']->set('database.default', 'testbench');
-        $app['config']->set('database.connections.testbench', [
-            'driver'   => 'sqlite',
-            'database' => ':memory:',
-        ]);
-    }
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->loadLaravelMigrations(['--database' => 'testbench']);
-        $this->artisan('migrate', ['--database' => 'testbench'])->run();
-    }
-
     public function testPermissions()
     {
         $res = \DB::table('permissions')->pluck('name')->toArray();

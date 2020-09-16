@@ -37,7 +37,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Sebastienheyd\\Boilerplate\\Tests\\": "tests/"
+            "Sebastienheyd\\Boilerplate\\Tests\\": "tests/",
+            "App\\": "tests/app"
         }
     },
     "authors": [
